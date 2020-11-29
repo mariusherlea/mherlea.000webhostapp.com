@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Herlea Marius Interest calculator" />
+    <meta name="author" content="Herlea Marius" />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1JSLF9C7M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-H1JSLF9C7M');
+    </script>
+
+    <title>Interest calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/app.css" />
+
+   
+    
+  </head>
+  <body>
+    <header>
+      <a class="navbar-brand js-scroll-trigger" href="../../index.html">Interest calculator</a>
+
+    </header>
+
+    <section id="calculator">
+      <label for="sum">Sum:</label>
+      <input type="number" id="sum" />
+      <label for="rateofinterest">Rate of interest:</label>
+      
+      <input type="number" id="rateofinterest" />
+      <label for="time">Time of deposit:</label>
+      <input type="number" id="time" />
+      <div id="calc-actions">
+        <button type="button" id="btn-calc">Calculate</button>
+        
+      </div>
+    </section>
+    <section id="results">
+      <h2>Interest: <span id ="current-calculation">0</span></h2>
+      <h2>Total: <span id="current-result">0</span></h2>
+    </section>
+    <script src="assets/scripts/vendor.js"></script>
+    <script src="assets/scripts/app.js"></script>
+    
+  </body>
+</html>
