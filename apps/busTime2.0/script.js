@@ -26,7 +26,7 @@ let data = [
         'balomir': '20:00',
         'sibot': '22:00',
         'vinerea': '23:00',
-        'cugir': '00:00'
+        'cugir': '01:00'
     },
 
     {
@@ -42,12 +42,22 @@ let data = [
 ];
 
 
-let car = data.find(car => car.alba === '18:00' && car.balomir === '20:00')
-console.log(car)
+
+for (let i = 0; i < data.length; i++) {
+    let start = data[i].cugir
+    let finish = data[i].vinerea
+    console.log(start)
+    console.log(finish)
+
+    if (start < finish) {
+        console.log(data[i])
+    } else {
+        console.log('!')
+    }
+}
 
 
 
-    
 
 
 
