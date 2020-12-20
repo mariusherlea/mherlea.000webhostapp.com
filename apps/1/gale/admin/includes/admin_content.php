@@ -10,17 +10,18 @@
             </h1>
 
             <?php
-            //in tontorial nu exista urmatoarea linie si fara mi-a dat oroare
-            include_once ("includes/users.php");
 
 
-//            $result_set=User::find_all_users();
-//            while ($row = mysqli_fetch_array($result_set)){
-//                echo $row['id'].'<br>';
+            //find all user and deserialization
+//            $users = User::find_all_users();
+//
+//            foreach ($users as $user) {
+//                echo $user->password . "<br>";
 //            }
 
-            $founded_user=User::find_user_by_id(1);
-            echo $founded_user['username'];
+            $found_user = User::find_user_by_id(2);
+            echo $found_user->username;
+
 
             ?>
 
