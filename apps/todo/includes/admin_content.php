@@ -9,7 +9,7 @@
                 ToDo List
 
             </h1>
-
+<table class="table table-dark">
             <?php
 
 
@@ -17,12 +17,12 @@
             $todo = Todo::find_all_task();
 
             foreach ($todo as $task) {
-                echo $task->id . "  ";
-                echo $task->text . "  ";
-                echo $task->time . "<br>";
+                echo "<tr><td>".$task->id . "</td>";
+                echo "<td>".$task->text . " </td> ";
+                echo "<td>".$task->time . "</td></tr>";
 
             } ?>
-
+</table>
 <h2>Search by Id</h2>
 
             <form action="includes/find.php" method="post">

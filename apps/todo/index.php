@@ -1,7 +1,7 @@
-<?php include("includes/header.php"); ?>
+<?php include("includes/header.php");
+include '../include/header.php';
 
-
-
+?>
 
 
         <div id="page-wrapper">
@@ -12,3 +12,5 @@
         </div>
         <!-- /#page-wrapper -->
 
+<?php
+include '../include/footer.php'; ?>
