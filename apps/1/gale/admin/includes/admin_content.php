@@ -13,14 +13,15 @@
 
 
             //find all user and deserialization
-//            $users = User::find_all_users();
-//
-//            foreach ($users as $user) {
-//                echo $user->password . "<br>";
-//            }
+            $users = User::find_all_users();
 
-            $found_user = User::find_user_by_id(2);
-            echo $found_user->username;
+            foreach ($users as $user) {
+                echo $user->username . "<br>";
+//                var_dump($user);
+            }
+
+//            $found_user = User::find_user_by_id(2);
+//            echo $found_user->id;
 
 
             ?>
