@@ -16,15 +16,46 @@
             $users = User::find_all_users();
 
             foreach ($users as $user) {
-                echo $user->username . "<br>";
-//                var_dump($user);
+                echo $user->id ." ".$user->username . "<br>";
+
             }
 
-//            $found_user = User::find_user_by_id(2);
-//            echo $found_user->id;
+            /*$found_user = User::find_user_by_id(1);
+            echo $found_user->first_name;
+
+            //insert user
+*/ ?>
+<h1>Create</h1>
+            <form action="../admin/create.php" method="post">
+                Username: <input name="username" type="text"><br>
+                Password: <input name="password" type="password"><br>
+                First Name: <input name="first_name" type="text"><br>
+                Last Name: <input name="last_name" type="text"><br>
+                <button name="create" type="submit">Create it</button>
+            </form>
+<h1>Update</h1>
+            <form action="../admin/update.php" method="post">
+                Id: <input name="id" type="number"><br>
+                Username: <input name="username" type="text"><br>
+                Password: <input name="password" type="password"><br>
+                First Name: <input name="first_name" type="text"><br>
+                Last Name: <input name="last_name" type="text"><br>
+                <button name="update" type="submit">Update it</button>
+            </form>
 
 
-            ?>
+            <?php
+/*            $user_c = new User();
+            $user_c->username = "Alta";
+            $user_c->password = "789";
+            $user_c->first_name = "Tot";
+            $user_c->last_name = "nuam";
+            $user_c->id='8';
+
+            $user_c->update();
+
+
+            */?>
 
             <ol class="breadcrumb">
                 <li>

@@ -14,25 +14,15 @@ class User
         return self::find_this_query("SELECT * FROM user_gallery");
 
 
-
     }
 
     public static function find_user_by_id($user_id)
     {
         $the_result_array = self::find_this_query("SELECT * FROM user_gallery WHERE id=$user_id LIMIT 1");
 
-//        if(!empty($the_result_array)){
-//           $first_item =  array_shift($the_result_array);
-//           return $first_item;
-//        } else {
-//            return false;
-//        }
-
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
 
 
-
-        return $found_user;
     }
 
     public static function find_this_query($sql)
@@ -40,13 +30,28 @@ class User
         global $database;
         $result_set = $database->query($sql);
 
-        $the_object_array=array();
+        $the_object_array = array();
 
-        while ($row = mysqli_fetch_array($result_set)){
-            $the_object_array[]= self::instantiation($row);
+        while ($row = mysqli_fetch_array($result_set)) {
+            $the_object_array[] = self::instantiation($row);
         }
 
         return $the_object_array;
+    }
+
+    public static function verify_user($username, $password)
+    {
+        global $database;
+
+        $username = $database->escape_string($username);
+        $password = $database->escape_string($password);
+        $sql = "SELECT * FROM user_gallery 
+WHERE username='{$username}' AND password='{$password}' LIMIT 1";
+
+        $the_result_array = self::find_this_query($sql);
+
+        return !empty($the_result_array) ? array_shift($the_result_array) : false;
+
     }
 
     public static function instantiation($the_record)
@@ -76,5 +81,44 @@ class User
 
         return array_key_exists($the_attribute, $object_properties);
 
-            }
-}
+    }
+
+    public function create()
+    {
+        global $database;
+        $sql = "INSERT INTO user_gallery (username, PASSWORD, first_name, last_name) 
+VALUES ('";
+
+        $sql .= $database->escape_string($this->username) . "','";
+        $sql .= $database->escape_string($this->password) . "','";
+        $sql .= $database->escape_string($this->first_name) . "','";
+        $sql .= $database->escape_string($this->last_name) . "')";
+
+        if ($database->query($sql)) {
+            $this->id = $database->the_insert_id();
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+
+    public function update()
+    {
+        global $database;
+        $sql = "UPDATE user_gallery SET ";
+
+        $sql .= "username= '" . $database->escape_string($this->username) . "',";
+        $sql .= "password= '" . $database->escape_string($this->password) . "',";
+        $sql .= "first_name= '" . $database->escape_string($this->first_name) . "',";
+        $sql .= "last_name= '" . $database->escape_string($this->last_name) . "'";
+        $sql .= "WHERE id= '" . $database->escape_string($this->id) . "'";
+
+       $database->query($sql);
+       return(mysqli_affected_rows($database->connection) == 1) ? true : false;
+
+    }
+
+
+} //End of User class9
