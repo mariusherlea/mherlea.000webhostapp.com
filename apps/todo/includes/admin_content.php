@@ -14,7 +14,7 @@
 
 
             //find all user and deserialization
-            $todo = Todo::find_all_task();
+            $todo = Routes::find_all_routes();
 
             foreach ($todo as $task) {
                 echo "<tr><td>".$task->id . "</td>";

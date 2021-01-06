@@ -31,7 +31,7 @@ if(isset($_POST['submit'])) {
 
 
 
-    $found_task = Todo::find_task_by_id($search);
+    $found_task = Routes::find_route_by_id($search);
     echo "<tr><td>".$found_task->id ."</td>";
     echo "<td>".$found_task->text ."</td>";
     echo "<td>".$found_task->time ."</td></tr></table><br><br>";
