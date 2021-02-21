@@ -18,6 +18,7 @@
 <?php
 // Check if the form is submitted
 if (isset($_GET['submit'])) {
+
     // retrieve the form data by using the element's name attributes value as key
     $start = $_GET['start'];
     $finish = $_GET['finish']; // display the results
