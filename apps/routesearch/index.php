@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="<?php $_PHP_SELF ?>" method="get">
+
+    <input type="text" name="start" placeholder="Start" />
+
+    <input type="text" name="finish" placeholder="Finish" />
+
+    <input type="submit" name="submit" />
+</form>
+
 <?php
 // Check if the form is submitted
 if (isset($_GET['submit'])) {
@@ -25,3 +42,7 @@ if (isset($_GET['submit'])) {
     }
 }
 ?>
+
+
+</body>
+</html>
