@@ -78,17 +78,29 @@ if (isset($_GET['submit'])) {
     );
 
     for ($i = 0; $i < count($r1); $i++) {
-        $start1 = strpos($r1[$i], "$start");
-        $finish1 = strpos($r1[$i], "$finish");
-//    echo $start;
-//    echo $finish;
-
-        if ($start1 < $finish1) {
-
-            echo "$r1[$i] </br><hr>";
-        } else {
-            echo " ";
+        $start1 = stripos($r1[$i], "$start");
+        $finish1 = stripos($r1[$i], "$finish");
+        $con = true;
+        if ($start1 === false) {
+            $con = false;
         }
+        if ($finish1 === false) {
+            $con = false;
+        }
+
+        if ($con) {
+//            echo "start: " . $start1 . " ;finis: " . $finish1 . "</br>";
+            if ($start1 < $finish1) {
+
+                echo "$r1[$i] </br><hr>";
+
+
+            } else {
+                echo " ";
+            }
+        }
+//            echo $start1.">>>".$finish1."</br>";
+
 
     }
 }
