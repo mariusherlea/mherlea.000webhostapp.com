@@ -2,7 +2,7 @@
 require_once ("includes/header.php");
 
 if ($session->is_signed_in()) {
-    redirect("index.php");
+    redirect("login.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
     if ($user_found) {
         $session->login($user_found);
-        redirect("index.php");
+        redirect("login.php");
     } else {
         $the_message = "Your password or username are incorrect";
     }

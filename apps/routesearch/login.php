@@ -79,19 +79,20 @@ session_start();
     if (isset($_POST['login']) && !empty($_POST['username'])
         && !empty($_POST['password'])) {
 
-        if ($_POST['username'] == 'tutorialspoint' &&
-            $_POST['password'] == '1234') {
+        if ($_POST['username'] == 'tu' &&
+            $_POST['password'] == '12') {
             $_SESSION['valid'] = true;
             $_SESSION['timeout'] = time();
-            $_SESSION['username'] = 'tutorialspoint';
+            $_SESSION['username'] = 'tu';
 
             echo 'You have entered valid use name and password';
-            header('Refresh: 2; URL = route.php');
+            header('Refresh: 1, URL = route.php');
 
 
         }
 
         else {
+
             $msg = 'Wrong username or password';
         }
     }
@@ -105,10 +106,10 @@ session_start();
           ?>" method = "post">
         <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
         <input type = "text" class = "form-control"
-               name = "username" placeholder = "username = tutorialspoint"
+               name = "username" placeholder = "username = tu"
                required autofocus></br>
         <input type = "password" class = "form-control"
-               name = "password" placeholder = "password = 1234" required>
+               name = "password" placeholder = "password = 12" required>
         <button class = "btn btn-lg btn-primary btn-block" type = "submit"
                 name = "login">Login</button>
     </form>

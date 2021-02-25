@@ -11,6 +11,9 @@
 </form>
 
 <?php
+
+session_start();
+
 // Check if the form is submitted
 if (isset($_GET['submit'])) {
 
@@ -101,3 +104,13 @@ if (isset($_GET['submit'])) {
 
 
     }}
+
+if($_SESSION['valid'] != true){
+
+        header("Location: login.php");
+        die();
+
+}
+
+
+
