@@ -7,12 +7,12 @@
     <input type="submit" name="submit"/>
     <br>
     <br>
-    Click here to clean <a href = "logout.php" tite = "Logout">Session.</a>
+<!--    Click here to clean <a href = "logout.php" tite = "Logout">Session.</a>-->
 </form>
 
 <?php
 
-session_start();
+//session_start();
 
 // Check if the form is submitted
 if (isset($_GET['submit'])) {
@@ -105,12 +105,12 @@ if (isset($_GET['submit'])) {
 
     }}
 
-if($_SESSION['valid'] != true){
+/*if($_SESSION['valid'] != true){
 
         header("Location: login.php");
         die();
 
-}
+}*/
 
 
 
