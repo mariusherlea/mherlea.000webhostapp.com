@@ -9,7 +9,7 @@
     <br>
 <!--    Click here to clean <a href = "logout.php" tite = "Logout">Session.</a>-->
 </form>
-
+<p>Cugir, Vinerea, Sibot, Balomir, Tartaria, Vint, Alba Iulia</p>
 <?php
 
 //session_start();
