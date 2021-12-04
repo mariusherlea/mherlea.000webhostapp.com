@@ -1,99 +1,91 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H1JSLF9C7M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-H1JSLF9C7M"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-H1JSLF9C7M');
-</script>
-
-
-
-
-
-
-
-
-
-
+      gtag("config", "G-H1JSLF9C7M");
+    </script>
 
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="description" content="Herlea Marius Bus Timetable" />
     <meta name="author" content="Herlea Marius" />
     <link href="../../css/styles.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <title>Bus Timetable</title>
-   
-    <a class="navbar-brand js-scroll-trigger" href="../../index.html">Bus Timetable</a>
+
+    <a href="../../index.html">Bus Timetable</a>
 
     <style>
-      
-      th, ul {
-        text-align: center;    
+      th,
+      ul {
+        text-align: center;
       }
-
     </style>
-
   </head>
 
-
-<body class="bg-dark" onload = "JavaScript:AutoRefresh(60000);">
-  
-  <table class="table table-dark ">
+  <body class="bg-dark" onload="JavaScript:AutoRefresh(60000);">
+    <table class="table table-dark">
       <tr>
-          <td><h3 class="p-3 mb-2 bg-dark text-white" id="time"></h3></td>
-          <td><h3 class="p-3 mb-2 bg-dark text-white" id="name"></h3></td>
-          <td class="p-3 mb-2 bg-dark text-white">Temp <h3 id="temp"></h3></td>
-          <td class="p-3 mb-2 bg-dark text-white">Hum <h3 id="humidity"></h3></td>
+        <td><h3 class="p-3 mb-2 bg-dark text-white" id="time"></h3></td>
+        <td><h3 class="p-3 mb-2 bg-dark text-white" id="name"></h3></td>
+        <td class="p-3 mb-2 bg-dark text-white">
+          Temp
+          <h3 id="temp"></h3>
+        </td>
+        <td class="p-3 mb-2 bg-dark text-white">
+          Hum
+          <h3 id="humidity"></h3>
+        </td>
       </tr>
-  </table>
+    </table>
 
-  
-  
-  
-  
-  <div id="root"></div>
+    <div id="root"></div>
 
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th colspan="4" text-align: center;><h4>Vinerea-Cugir</h4></th>
+        </tr>
+        <tr>
+          <th><h5>Departure Cugir</h5></th>
+          <th><h5>Departure Cugir S-D</h5></th>
+          <th><h5>Departure Vinerea</h5></th>
+          <th><h5>Departure Vinerea S-D</h5></th>
+        </tr>
+      </thead>
 
-<table class="table table-dark ">
-  <thead>
-    <tr>
-      <th colspan="4" text-align: center; ><h4>Vinerea-Cugir</h4></th>
-    </tr>
-    <tr>
-      <th><h5>Departure Cugir</h5></th>
-      <th><h5>Departure Cugir S-D</h5></th>
-      <th><h5>Departure Vinerea</h5></th>
-      <th><h5>Departure Vinerea S-D</h5></th>
-    </tr>
-  </thead>
+      <tbody>
+        <tr>
+          <td><p id="cugir"></p></td>
+          <td><p id="cugirSD"></p></td>
+          <td><p id="vinerea"></p></td>
+          <td><p id="vinereaSD"></p></td>
+        </tr>
+      </tbody>
+    </table>
 
-  <tbody >
-    <tr>
-      <td> <p id="cugir"></p></td>
-      <td> <p id="cugirSD"></p></td>
-      <td> <p id="vinerea"></p></td>
-      <td> <p id="vinereaSD"></p></td>
-    </tr>
- 
-  </tbody>
-
-</table>
-
- 
-
-
-
-<script src="script.js"></script>
-<script src="script2.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+  </body>
 </html>
