@@ -1,77 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 
-header {
-  font-family: "Special Elite", cursive;
-}
-
 body {
   background-color: black;
   color: white;
 }
 
-p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-li {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
-}
-
-h1 {
+header {
   font-family: "Special Elite", cursive;
-  font-size: 50px;
+}
+
+header h1 {
+  color: #46fc46;
+  font-size: 48px;
   text-align: center;
 }
 
-h2 {
-  font-size: 40px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+nav {
+  font-family: Carlito;
+  font-size: 24px;
 }
 
-h3 {
-  font-size: 30px;
-  font-family: sans-serif;
+main h2 {
+  font-family: KacstBook;
+  color: #9696ff;
+  font-size: 34px;
 }
 
-h4 {
-  font-size: 80px;
-  color: rgba(206, 206, 206, 0.315);
-  font-family: sans-serif;
+main h3 {
+  color: #c284ee;
+  font-family: monospace;
+  font-size: 24px;
 }
 
-td {
-  vertical-align: top;
+main h4 {
+  font-family: Impact;
+  font-size: 38px;
+  color: rgba(252, 252, 252, 0.3);
 }
 
-.service-image {
-  width: 40%;
+main p {
+  font-family: Ebrima;
 }
 
-.box {
-  border: 2px solid rgb(8, 173, 151);
-  border-radius: 5px;
-}
-
-.cv-picture {
+main img {
   width: 50%;
   height: auto;
+  border-radius: 50px;
 }
 
-.table-cv {
-  vertical-align: center;
-}
-.corect-position-table-cv {
-  vertical-align: middle;
+main a {
+  font-family: Bahnschrift;
 }
 
-.nav td {
-  text-align: center;
-  height: 30px;
-  vertical-align: bottom;
+main li {
+  font-family: Dialog;
+  /*font-size: 24px;*/
 }
 
 /* unvisited link */
@@ -82,7 +65,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: green;
+  color: #0387fa;
   text-decoration: none;
 }
 
