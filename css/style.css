@@ -1,0 +1,14 @@
+#hero {
+  height: 600px;
+  background-image: url("/assets/img/map-image.png");
+  background-position: center;
+  background-size: cover;
+}
+#hero-content {
+  width: 300px;
+  background-color: rgba(51, 47, 47, 0.8);
+  border-radius: 8px;
+  text-align: center;
+  padding: 50px 0;
+  margin: 0 auto;
+}
