@@ -13,8 +13,8 @@ body {
   padding: 0;
 }
 
-#logo {
-  font-size: 2rem;
+.logo {
+  font-size: 3rem;
   font-weight: bold;
   color: rgb(238, 164, 80);
   text-transform: uppercase;
@@ -217,31 +217,39 @@ footer ul li {
 }
 
 .cv li:nth-of-type(even) {
-  background-color: #2b16eea1;
-  color: rgba(206, 115, 41, 0.993);
+  background: linear-gradient(30deg, rgb(71, 69, 70), rgb(0, 0, 0));
   align-self: center;
+}
+.cv li ol li:nth-of-type(odd) {
+  color: aquamarine;
 }
 .footer-cv {
   top: 12rem;
   position: relative;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 70rem) {
   /* .menu-btn {
     display: flex;
   } */
   /* main h1 {
     font-size: 1.5rem;
   } */
-  #logo {
+  .logo {
     display: block;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   #apps {
     grid-template-columns: 1fr;
   }
+  #portofolio {
+    padding-top: 6rem;
+  }
   main section {
     padding-top: 5rem;
+  }
+  .cv ul {
+    grid-template-columns: 1fr;
   }
   /* #main-header nav {
     display: none;
